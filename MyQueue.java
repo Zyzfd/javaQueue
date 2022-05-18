@@ -13,7 +13,7 @@ class MyQueue {
         nElem = 0;
     }
 
-    public void insert (int elem) {
+    public void inqueue (int elem) {
         if (rear == maxSize - 1) {  // циклический перенос
             rear = -1;
         }
@@ -22,7 +22,7 @@ class MyQueue {
         nElem++;  // увеличение количества элементов в очереди
     }
 
-    public int remove() {
+    public int dequeue() {
         int temp = queue[front++]; // получаем первый элемент из очереди
         
         if (front == maxSize) { // циклический перенос
